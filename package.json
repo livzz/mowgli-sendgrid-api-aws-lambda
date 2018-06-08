@@ -1,0 +1,16 @@
+{
+  "name": "sendgrid",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@sendgrid/mail": "^6.2.1",
+    "body-parser": "^1.18.3",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "serverless-http": "^1.5.5"
+  },
+  "devDependencies": {
+    "serverless-offline": "^3.25.4"
+  }
+}
