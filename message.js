@@ -1,7 +1,7 @@
 class Message {
 
     constructor(request){
-        this.msgClient = {
+        this.msgToClient = {
             to: request.to,
             from: "dont-reply@mowglitrails.com",
             // subject: "Sending with SendGrid is Fun",
@@ -12,7 +12,7 @@ class Message {
             //     name: "Yaaaai"
             // }
         };
-        this.msgOwner = {
+        this.msgToOwner = {
             from: "dont-reply@mowglitrails.com",
         };
         this.request = request;
@@ -22,18 +22,18 @@ class Message {
         switch (this.request.type){
             // For Newsletter Subscription
             case "0":
-                this.msgClient.subject = "Newsletter Subscription";
-                this.msgClient.text = "You have been successfully registered to our newsletter.";
-                this.msgClient.html = "<div style='text-align: center; color: cadetblue;'>You have been successfully registered to our newsletter.</div>";
-                this.msgClient.templateId = "566dbd06-2a9c-4668-813c-4aa12d52f465";
-                return this.msgClient;
+                this.msgToClient.subject = "Newsletter Subscription";
+                this.msgToClient.text = "You have been successfully registered to our newsletter.";
+                this.msgToClient.html = "<div style='text-align: center; color: cadetblue;'>You have been successfully registered to our newsletter.</div>";
+                this.msgToClient.templateId = "566dbd06-2a9c-4668-813c-4aa12d52f465";
+                return this.msgToClient;
             // For Craft Acknowledgement
             case "1":
-                this.msgClient.subject = "Acknowledgement";
-                this.msgClient.text = "We have received your craft, will get back to you soon.";
-                this.msgClient.html = "<div style='text-align: center; color: cadetblue;'>We have received your craft, will get back to you soon.</div>";
-                this.msgClient.templateId = "566dbd06-2a9c-4668-813c-4aa12d52f465";
-                return this.msgClient;
+                this.msgToClient.subject = "Acknowledgement";
+                this.msgToClient.text = "We have received your craft, will get back to you soon.";
+                this.msgToClient.html = "<div style='text-align: center; color: cadetblue;'>We have received your craft, will get back to you soon.</div>";
+                this.msgToClient.templateId = "566dbd06-2a9c-4668-813c-4aa12d52f465";
+                return this.msgToClient;
             case "2":
         }
     }
