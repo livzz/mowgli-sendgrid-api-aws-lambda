@@ -20,7 +20,7 @@ app.post("/notify", async (req, res) => {
         message: null
     };
     try {
-        const result = await sendgrid.send(msgBuilder.getMessage());
+        const result = await sendgrid.send(msgBuilder.getMessageForClient());
         if (result) {
             console.log("Success: ",result);
             response.error = null;

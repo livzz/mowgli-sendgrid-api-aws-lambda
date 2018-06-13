@@ -18,7 +18,7 @@ class Message {
         this.request = request;
     }
 
-    getMessage(){
+    getMessageForClient(){
         switch (this.request.type){
             // For Newsletter Subscription
             case "0":
