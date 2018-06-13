@@ -13,7 +13,7 @@ class Message {
             // }
         };
         this.msgOwner = {
-            from: "dont-reply@droidvue.com",
+            from: "dont-reply@mowglitrails.com",
         };
         this.request = request;
     }
