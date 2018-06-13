@@ -47,7 +47,7 @@ provider:
 
 # you can define service wide environment variables here
 environment:
-   SENDGRID_API_KEY: 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
+   SENDGRID_API_KEY: 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
 
 # you can add packaging information here
 #package:
