@@ -14,6 +14,7 @@ class Message {
         };
         this.msgToOwner = {
             from: "dont-reply@mowglitrails.com",
+            to: process.env.OWNER_EMAIL
         };
         this.request = request;
     }
