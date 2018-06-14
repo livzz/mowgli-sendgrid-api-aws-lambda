@@ -46,9 +46,9 @@ provider:
 #            - "/*"
 
 # you can define service wide environment variables here
-environment:
-   SENDGRID_API_KEY: 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
-   OWNER_EMAIL: alibh619@gmail.com # TODO : Update to actual owner email
+#environment:
+#   SENDGRID_API_KEY: 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
+#   OWNER_EMAIL: alibh619@gmail.com # TODO : Update to actual owner email
 
 # you can add packaging information here
 #package:
