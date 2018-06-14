@@ -20,11 +20,12 @@ app.post("/notify", async (req, res) => {
         message: null
     };
     try {
-        const result = await sendgrid.send(msgBuilder.getMessageForClient());
-        if (result) {
-            console.log("Success: ",result);
+        [resultClient, resultOwner] = await Promise.all([sendgrid.send(msgBuilder.getMessageForClient()), sendgrid.send(msgBuilder.getMessageForOwner())]);
+        if (resultClient && resultOwner) {
+            console.log("Success for Client: ",resultClient);
+            console.log("Success for Owner: ",resultOwner);
             response.error = null;
-            response.message = result;
+            response.message = resultClient;
         }
     } catch (e) {
         response.message = e;
@@ -38,5 +39,3 @@ app.use("/", async (req, res) => {
 });
 
 module.exports.handler = serverless(app);
-
-

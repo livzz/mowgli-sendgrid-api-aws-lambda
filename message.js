@@ -38,6 +38,26 @@ class Message {
             case "2":
         }
     }
+
+    getMessageForOwner(){
+        switch (this.request.type){
+            // For Newsletter Subscription
+            case "0":
+                this.msgToOwner.subject = "New Subscriber";
+                this.msgToOwner.text = "You have a new subscriber";
+                this.msgToOwner.html = "<div style='text-align: center; color: cadetblue;'>You have a new subscriber</div>";
+                this.msgToOwner.templateId = "566dbd06-2a9c-4668-813c-4aa12d52f465";
+                return this.msgToOwner;
+            // For Craft Acknowledgement
+            case "1":
+                this.msgToOwner.subject = "New Craft";
+                this.msgToOwner.text = "You have a new craft request";
+                this.msgToOwner.html = "<div style='text-align: center; color: cadetblue;'>You have a new craft request</div>";
+                this.msgToOwner.templateId = "566dbd06-2a9c-4668-813c-4aa12d52f465";
+                return this.msgToOwner;
+            case "2":
+        }
+    }
 }
 
 module.exports = Message;
